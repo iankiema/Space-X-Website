@@ -1,0 +1,213 @@
+.container-title {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid silver;
+}
+
+.container-logo {
+  display: flex;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.store {
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.container-title ul {
+  display: flex;
+  margin-right: 30px;
+}
+
+.container-title ul li {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.last {
+  border-left: 2px solid silver;
+  padding-left: 20px;
+}
+
+.container-title ul li a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+/* Missions.css */
+
+.missions-container {
+  margin: 20px;
+}
+
+.missions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.missions-table th,
+.missions-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.missions-table th {
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.mission-name {
+  font-weight: bold;
+}
+
+.missions-table tr {
+  background-color: #f0f0f0;
+}
+
+.missions-table tr.active {
+  background-color: #fff;
+}
+
+.missions-table .membership-label {
+  width: 120px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: rgb(95, 92, 92);
+  color: white;
+}
+
+.missions-table .active-member-label {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.action-button {
+  width: 120px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* profiles.css */
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.profiles-container {
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-missions-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.profile-missions-table {
+  width: 100%;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+.profile-missions-table th,
+.profile-missions-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.profile-missions-table th {
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.profile-missions-table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/* rockets CSS */
+
+.rockets {
+  display: grid;
+  margin: 1rem;
+}
+
+.rocket-alone {
+  display: flex;
+  gap: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rocket-alone img {
+  height: 200px;
+  width: 300px;
+}
+
+.rocket-alone .rocket-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.rocket-alone h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.rocket-alone p {
+  margin: 0;
+}
+
+.rocket-alone button {
+  padding: 10px;
+}
+
+.rocket-reservation {
+  background-color: rgb(57, 159, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel-reservation {
+  background: transparent;
+  border: 1px solid rgb(105, 105, 105);
+  color: rgb(105, 105, 105);
+  border-radius: 5px;
+}
+
+.badge {
+  display: flex;
+  align-items: flex-start;
+}
+
+.reserved-badge {
+  background-color: #17a2b9;
+  color: #fff;
+  height: 20px;
+  padding: 0 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
