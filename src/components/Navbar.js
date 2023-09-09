@@ -1,28 +1,38 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../logo/space-logo.png';
 import '../App.css';
 
-const Navbar = () => (
-  <header>
-    <div className="container-title">
-      <div className="container-logo">
-        <img className="logo" src={Logo} alt="spaceX-logo" />
-        <h1 className="store">Space Travelers Hub</h1>
+const Navbar = () => {
+  const location = useLocation();
+  const [activeRoute, setActiveRoute] = useState('');
+
+  useEffect(() => {
+    const currentRoute = location.pathname.split('/')[1];
+    setActiveRoute(currentRoute);
+  }, [location.pathname]);
+
+  return (
+    <header>
+      <div className="container-title">
+        <div className="container-logo">
+          <img className="logo" src={Logo} alt="spaceX-logo" />
+          <h1 className="store">Space Travelers Hub</h1>
+        </div>
+        <ul>
+          <li>
+            <NavLink to="/rockets" className={activeRoute === 'rockets' ? 'current' : ''}>Rockets</NavLink>
+          </li>
+          <li>
+            <NavLink to="/missions" className={activeRoute === 'missions' ? 'current' : ''}>Missions</NavLink>
+          </li>
+          <li>
+            <NavLink to="/" className={activeRoute === '' ? 'current last' : ''}>My Profile</NavLink>
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li>
-          <NavLink to="/rockets" className="current">Rockets</NavLink>
-        </li>
-        <li>
-          <NavLink to="/missions" className="current">Missions</NavLink>
-        </li>
-        <li>
-          <NavLink to="/" className="current last">My Profile</NavLink>
-        </li>
-      </ul>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export default Navbar;

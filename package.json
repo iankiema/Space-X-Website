@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject",
-    "check-style": "stylelint '**/*.{css,scss}'",
+    "check-style": "npx stylelint '**/*.{css,scss}'",
     "check-eslint": "npx eslint '**/*.{js,jsx}'",
     "fixing-style": "npx stylelint '**/*.{css,scss}' --fix",
     "fixing-eslint": "npx eslint '**/*.{js,jsx}' --fix"
